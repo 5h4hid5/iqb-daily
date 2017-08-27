@@ -1,5 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri');
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/chrome_Extension_BG.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+#root {
+  //background-color: rgba(17,17,17,0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: #FFF;
+  position: relative;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #79C400;
+  opacity: 0.3;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.quoteBlock {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.quote {
+  font-size: 2em;
+}
+
+.author {
+  font-size: 1.2em;
+  opacity: 0.5;
+}
+
+.ToDo {
+  position: absolute;
+  right: 35px;
+  bottom: 30px;
+  width: 250px;
+  text-align: right;
+}
+
+.ToDoList {
+  width: 280px;
+  position: fixed;
+  bottom: 65px;
+  right: -330px;
+  transition: all ease-in-out 0.3s;
+}
+
+.ToDoVisible {
+  right: 35px;
+}
+
+.task {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  position: relative;
+  text-align: left;
+  color: #000;
+  margin-bottom: 5px;
+  border-radius: 1px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.task .text {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.task .done {
+  display: inline-block;
+  height: 100%;
+  margin-right: 0.5em;
+  border-right: 2px solid rgba(0, 0, 0, 0.7);
+  width: 50px;
+  position: relative;
+}
+
+.task .done input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.task .done label {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.task .completed input[type="checkbox"]:checked + label {
+  background-color: green;
+}
+
+.task .delete {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0 0.5em;
+  border-left: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.task .delete button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border: none;
+}
+
+.task .delete img {
+  width: 12px;
+  height: auto;
+}
+
+.task .newTask {
+  margin-left: 1em;
+  background: none;
+  border: none;
+  padding: 0.4em;
+  width: 170px;
+}
+
+.task .newTask::-webkit-input-placeholder {
+  color: #000;
+}
+
+.task .newTask:focus {
+  outline: none;
+}
+
+.toggleToDo {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.toggleToDo img {
+  width: 20px;
+  height: auto;
+}
+
+button:focus {
+  outline: none;
 }
